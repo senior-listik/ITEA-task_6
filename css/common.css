@@ -1,0 +1,106 @@
+*,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #e2e2e2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+.card{
+    margin-top: 50px;
+    width: 30%;
+    height: 550px;
+    background: #ffffff;
+
+    /* animation-name: transformElement;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 2; */
+    
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 0.5, 0.265, 1.0);
+}
+.card:hover{
+    width: 300px;
+    height: 580px;
+    box-shadow: 0px 10px 12px 7px #b6b6b8;
+}
+
+.card:hover .card__header{
+    background: #ff8000;
+}
+.card:hover .card__triangle{
+    border-top: 12px solid #ff8000;
+}
+/*.card:hover{
+    z-index: 1;
+    animation-name: transformElement;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        
+}
+@keyframes transformElement {
+        from{
+            width: 30%;
+            height: 550px;
+        }
+        to{
+            width: 32%;
+            height: 570px;
+        }
+    } */
+
+.card__wrapper{
+    width: 85%;
+    margin: 0 auto;
+}
+.card__header{
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #283dfa;
+    color:#ffffff;
+    position: relative;
+}
+.card__title{
+    text-align: center;
+}
+.card__triangle{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -15px;
+    margin: 0 auto;
+    width: 0px;
+    height: 0px;
+    border-top: 12px solid #283dfa;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+}
+.card__text{
+    padding: 15px 0 30px;
+}
+.card__coastText{
+    color:#707070;
+    text-align: center;
+}
+.card__coastText::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background: #ff0000;
+}
