@@ -1,0 +1,31 @@
+.card:hover {
+    width: 260px;
+    height: 560px;
+    box-shadow: 0px 10px 12px 7px #b6b6b8;
+    transition-duration: 0.5s;
+}
+
+.card:hover .card__header {
+    background: #ff8000;
+    height: 13%;
+    transition-duration: 0.5s;
+}
+
+.card:hover .card__headerTriangle {
+    border-top: 12px solid #ff8000;
+    transition-duration: 0.5s;
+}
+
+.card:hover .card__lable--small{
+    background: #e11d1d;
+    transition-duration: 0.5s;
+}
+.card:hover .card__lableTriangle--small{
+    border-top: 7px solid #e11d1d;
+    transition-duration: 0.5s;
+}
+.card:hover .card__lableTriangle--big{
+    border-right: 108px solid transparent;
+    border-left: 108px solid transparent;
+    transition-duration: 0.5s;
+}

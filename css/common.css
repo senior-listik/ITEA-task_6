@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --color-1: #283dfa;
+    --change-color-1: #ff8000;
+    --change-color-3: #ff8000;
+}
 body{
     background: #e2e2e2;
     font-family: Arial, Helvetica, sans-serif;
@@ -12,15 +17,15 @@ body{
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
-    gap: 40px;
-    max-width: 900px;
-    width: 100%;
+    gap: 35px;
+    /* max-width: 900px; */
+    width: 820px;
     margin: 0 auto;
 }
 .card{
     margin-top: 50px;
-    width: 30%;
-    height: 550px;
+    width: 250px;
+    height: 530px;
     background: #ffffff;
 
     /* animation-name: transformElement;
@@ -31,18 +36,7 @@ body{
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0.5, 0.5, 0.265, 1.0);
 }
-.card:hover{
-    width: 300px;
-    height: 580px;
-    box-shadow: 0px 10px 12px 7px #b6b6b8;
-}
 
-.card:hover .card__header{
-    background: #ff8000;
-}
-.card:hover .card__triangle{
-    border-top: 12px solid #ff8000;
-}
 /*.card:hover{
     z-index: 1;
     animation-name: transformElement;
@@ -66,18 +60,21 @@ body{
     margin: 0 auto;
 }
 .card__header{
-    height: 12%;
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #283dfa;
+    background: var(--color-1);
     color:#ffffff;
+    transition-duration: 0.5s;
+    
+    transition-timing-function: cubic-bezier(0.5, 0.5, 0.265, 1.0);
     position: relative;
 }
 .card__title{
     text-align: center;
 }
-.card__triangle{
+.card__headerTriangle{
     position: absolute;
     right: 0;
     left: 0;
@@ -89,18 +86,116 @@ body{
     border-right: 7px solid transparent;
     border-left: 7px solid transparent;
     border-bottom: 7px solid transparent;
+    transition-duration: 0.5s;
 }
 .card__text{
     padding: 15px 0 30px;
 }
-.card__coastText{
+.card__subTitle{
     color:#707070;
     text-align: center;
 }
-.card__coastText::before{
-    content: '';
-    position: absolute;
-    width: 30px;
+.card__subTitle--container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card__line--short{
+    background: #bcbaba;
+    width: 75px;
     height: 1px;
-    background: #ff0000;
+}
+.card__text--cost{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+}
+.card__line--long{
+     background: #bcbaba;
+    width: 100%;
+    height: 1.2px;
+    margin-bottom: 30px;
+}
+.card__lable--big{
+    background-color: #dcdcdc;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.card__lable--small {
+    position: absolute;
+    top: -15px;
+    width: 34px;
+    height: 22px;
+    background-color: #283dfa;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transition-duration: 0.5s;
+}
+.card__lableTriangle--small {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -14px;
+    margin: 0 auto;
+    width: 0px;
+    height: 0px;
+    border-top: 7px solid #283dfa;
+    border-right: 17px solid transparent;
+    border-left: 17px solid transparent;
+    border-bottom: 7px solid transparent;
+    transition-duration: 0.5s;
+}
+
+.card__lableTitle{
+    font-size: 23px;
+}
+.card__lableText{
+    font-style: 8px;
+}
+.card__lableTriangle--big {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -24px;
+    margin: 0 auto;
+    width: 0px;
+    height: 0px;
+    border-top: 24px solid #dcdcdc;
+    border-right: 106.25px solid transparent;
+    border-left: 106.25px solid transparent;
+    border-bottom: 0px solid transparent;
+}
+.card__btn{
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 40px auto 20px;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    /* background-color: #565656;
+        color: transparent;
+        text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text; */
+    background: linear-gradient(0deg, rgba(43, 173, 1, 1) 0%, rgba(157, 230, 1, 1) 63%, rgba(117, 213, 130, 1) 100%);
+    border:none;
+    border-radius: 5px;
+}
+.fa-circle-star {
+    color: red;
+    width: 20px;
+    height: 20px;
 }
