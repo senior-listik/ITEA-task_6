@@ -91,9 +91,9 @@ body{
 .card__text{
     padding: 15px 0 30px;
 }
-.card__text--third{
+/* .card__text--third{
     padding: 15px 0 30px;
-}
+} */
 .card__subTitle{
     color:#707070;
     text-align: center;
