@@ -12,48 +12,22 @@ body{
 .container{
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
-    gap: 35px;
-    /* max-width: 900px; */
-    width: 820px;
+    justify-content: space-between;
+    max-width: 820px;
     margin: 0 auto;
 }
 .card{
     margin-top: 50px;
-    width: 250px;
+    width: 30%;
     height: 530px;
     background: #ffffff;
-
-    /* animation-name: transformElement;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    animation-iteration-count: 2; */
-    
     transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0.5, 0.5, 0.265, 1.0);
 }
-
-/*.card:hover{
-    z-index: 1;
-    animation-name: transformElement;
-        animation-duration: 1s;
-        animation-fill-mode: both;
-        
-}
-@keyframes transformElement {
-        from{
-            width: 30%;
-            height: 550px;
-        }
-        to{
-            width: 32%;
-            height: 570px;
-        }
-    } */
-
 .card__wrapper{
     width: 85%;
+    height: 90%;
     margin: 0 auto;
+    position: relative;
 }
 .card__header{
     height: 10%;
@@ -63,8 +37,6 @@ body{
     background: #283dfa;
     color:#ffffff;
     transition-duration: 0.5s;
-    
-    transition-timing-function: cubic-bezier(0.5, 0.5, 0.265, 1.0);
     position: relative;
 }
 .card__title{
@@ -84,12 +56,28 @@ body{
     border-bottom: 7px solid transparent;
     transition-duration: 0.5s;
 }
-.card__text{
-    padding: 15px 0 30px;
+.card__text--container{
+    padding: 15px 0 0 0px;
+    height: 43%;
 }
-/* .card__text--third{
-    padding: 15px 0 30px;
-} */
+.card__textBonus{
+    font-weight: bold;
+    font-size: 10px;
+}
+.card__icon{
+    margin: 10px 0 0 0;
+    width: 18px;
+    height: 18px;
+    background: #e11d1d;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 1);
+}
+.fa-solid{
+    font-size: 8px;
+}
 .card__subTitle{
     color:#707070;
     text-align: center;
@@ -120,6 +108,8 @@ body{
     background-color: #dcdcdc;
     height: 100px;
     width: 100%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -139,13 +129,15 @@ body{
     justify-content: center;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
     transition-duration: 0.5s;
 }
 .card__lableTriangle--small {
     position: absolute;
     right: 0;
     left: 0;
-    bottom: -14px;
+    bottom: -13.2px;
     margin: 0 auto;
     width: 0px;
     height: 0px;
@@ -166,35 +158,36 @@ body{
     position: absolute;
     right: 0;
     left: 0;
-    bottom: -24px;
+    bottom: -23.2px;
     margin: 0 auto;
     width: 0px;
     height: 0px;
     border-top: 24px solid #dcdcdc;
-    border-right: 106.25px solid transparent;
-    border-left: 106.25px solid transparent;
+    border-right: 105px solid transparent;
+    border-left: 105px solid transparent;
     border-bottom: 0px solid transparent;
 }
 .card__btn{
     display: block;
     width: 100px;
     height: 30px;
-    margin: 40px auto 20px;
-    color:#ffffff;
+    margin: 40px auto 15px;
+    text-decoration: none;
     font-size: 14px;
     font-weight: bold;
-    /* background-color: #565656;
-        color: transparent;
-        text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text; */
     background: linear-gradient(0deg, rgba(43, 173, 1, 1) 0%, rgba(157, 230, 1, 1) 63%, rgba(117, 213, 130, 1) 100%);
     border:none;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.fa-circle-star {
-    color: red;
-    width: 20px;
-    height: 20px;
+.card__btnText{
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0px 0 rgb(255, 255, 255), 
+                    0 -1px 0 rgba(0, 0, 0, 0.45);
+                    
 }
